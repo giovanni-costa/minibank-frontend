@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-
-const API_URL = 'http://localhost:9090'
+import { API_URL } from '..';
 
 export default function LoginUI(props){
 
@@ -14,12 +13,12 @@ export default function LoginUI(props){
 
             const api = axios.create({
                 baseURL: API_URL,
-                timeout: 1000,
+                timeout: 10000,
                 headers: {'Content-Type': 'application/json'}
             })
 
             const response = await api.get(`auth?cpf=${UserCPF}&pwd=${UserPwd}`);
-            
+
             props.onTokenSetup(response.data)
         }
         catch(error){

@@ -1,18 +1,22 @@
 import React from 'react'
-// import axios from 'axios';
+import WelcomeCard from './welcome_card'
+import TransferUI from './transfer_ui'
 
 export default function Home(props){
 
-    // const[userName, setUserName] = useState()
+    const userInfo = props.data.data
 
     return(
+
         <div className='container-2'>
 
-            <h1>minibank</h1>
+            <WelcomeCard name={userInfo.sub} balance={userInfo.amount}/>
 
-            <label>Welcome, {props.data.name}</label>
+            <TransferUI userID={userInfo.id} hashToken={props.data.token}/>
 
-            <label>Your total amount is ${props.data.amount}</label>
+            <button>Transfer</button>
+
         </div>
+        
     )
 }

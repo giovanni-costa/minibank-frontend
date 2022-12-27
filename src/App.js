@@ -10,9 +10,8 @@ function App() {
   if(!token){ return <LoginUI onTokenSetup={setToken}/>}
 
   else{ 
-    return <Home data={token.data}/> 
-  } 
-
+    return <Home data={token}/> 
+  }
 }
 
 export default App;
