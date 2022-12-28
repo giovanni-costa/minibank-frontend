@@ -44,6 +44,7 @@ export default function TransferUI(props){
 
             setID("")
             setAmount(0)
+            setPassword("")
 
         } catch(error){
             alert(error)

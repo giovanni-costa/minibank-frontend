@@ -1,6 +1,7 @@
 import React from 'react'
 import WelcomeCard from './welcome_card'
 import TransferUI from './transfer_ui'
+import LastTransfers from './last_transfers'
 
 export default function Home(props){
 
@@ -12,9 +13,9 @@ export default function Home(props){
 
             <WelcomeCard name={userInfo.sub} balance={userInfo.amount}/>
 
-            <TransferUI userID={userInfo.id} hashToken={props.data.token}/>
+            <LastTransfers userID={userInfo.id} hashToken={props.data.token}/>
 
-            <button>Transfer</button>
+            <TransferUI userID={userInfo.id} hashToken={props.data.token}/>
 
         </div>
         

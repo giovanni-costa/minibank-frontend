@@ -5,7 +5,7 @@ export default function TransfersCard(props){
 
     return(
 
-        <div className='transfer'>
+        <div className='transfer-card'>
 
             <div>{props.peer}</div>
             
